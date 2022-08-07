@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet P3",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass --watch sass/main.scss:public/css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Al3xC4b/Ohmyfood.git"
+  },
+  "author": "al3xc4b",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Al3xC4b/Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Al3xC4b/Ohmyfood#readme"
+}
