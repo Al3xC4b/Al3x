@@ -20,9 +20,17 @@ body{
     }
 }
 
+.localisation{
+    background-color: darken($color: $color-grey-background, $amount: 5%);
+    width: 100%;
+}
+
+
+
 .flex-row{
     display: flex;
     align-items: center;
+    justify-content: center;
     p{
         margin-left: 15px;
         font-size: 20px;
