@@ -1,0 +1,8 @@
+@mixin font-body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+@mixin font-title {
+    font-family: 'Shrikhand', sans-serif;
+}
