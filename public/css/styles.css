@@ -336,9 +336,35 @@ header img {
   margin-bottom: 40px;
 }
 
+.how-it-works {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  margin-left: 35px;
+  padding: 20px 0;
+  background-color: rgb(246, 246, 246);
+  border-radius: 20px;
+}
+.how-it-works__number {
+  background-color: #9356DC;
+  color: #fff;
+  height: 35px;
+  width: 35px;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+  text-align: center;
+  line-height: 20px;
+  margin-left: -17.5px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+}
+
+section h2 {
+  margin-left: 17.5px;
 }
 
 .section {

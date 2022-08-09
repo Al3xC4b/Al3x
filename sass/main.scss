@@ -4,8 +4,14 @@
 @import "base/base.scss";
 @import "layouts/header.scss";
 @import "components/btn.scss";
+@import "components/how-it-works";
+
 body{
     @include font-body;
+}
+
+section h2{
+    margin-left: 17.5px;
 }
 
 .section{
