@@ -6,3 +6,10 @@
 @mixin font-title {
     font-family: 'Shrikhand', sans-serif;
 }
+
+@mixin flex-column{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
