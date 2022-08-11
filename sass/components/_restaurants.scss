@@ -17,6 +17,7 @@
 
     &__body{
         display: flex;
+        align-items: center;
         background-color: #FFF;
         border-radius: 0 0 20px 20px;
         h3{
@@ -50,7 +51,7 @@
     &__heart{
         display: flex;
         justify-content: flex-end;
-        align-items: center;
+        
         font-size: 30px;
         margin-right: 30px;
         .fa-solid{
