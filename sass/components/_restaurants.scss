@@ -1,14 +1,16 @@
 .restaurant{
     width: 90%;
-    margin-left: 20px;
     position: relative;
+    margin-bottom: 20px;
     
 
     &__img{
         width: 100%;
+        height: 200px;
         img{
             object-fit: cover;
             width: 100%;
+            height: 100%;
             border-radius: 20px 20px 0 0;
         }
     }
@@ -16,10 +18,46 @@
     &__body{
         display: flex;
         background-color: #FFF;
+        border-radius: 0 0 20px 20px;
+        h3{
+            margin-left: 10px;
+            margin-bottom: 0;
+            font-weight: 900;
+        }
+        p{
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+        div:nth-child(1){
+            width: 60%;
+        }
+        div:nth-child(2){
+            width: 40%;
+        }
     }
 
     &__new{
         position: absolute;
-        top: 0px;
+        background-color: $color-btn-new;
+        color: darken($color: $color-btn-new, $amount: 40%);
+        font-weight: 700;
+        padding: 10px;
+        top: 25px;
+        right: 25px;
+        
+    }
+
+    &__heart{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 30px;
+        margin-right: 30px;
+        .fa-solid{
+            margin-right: -30px;
+            display: none;
+        }
+
+        
     }
 }

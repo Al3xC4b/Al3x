@@ -3,20 +3,13 @@
 @import "utils/mixins.scss";
 @import "base/base.scss";
 @import "layouts/header.scss";
+@import "layouts/footer.scss";
 @import "components/btn.scss";
 @import "components/how-it-works";
 @import"components/restaurants.scss";
 
 body{
     @include font-body;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-    &::active{
-        color: black;
-    }
 }
 
 section h2{
@@ -31,6 +24,13 @@ section h2{
 
 #section-title, #section-how-it-works, #section-restaurants{
     @include flex-column;
+}
+
+#section-how-it-works, #section-restaurants{
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+
 }
 
 .localisation{

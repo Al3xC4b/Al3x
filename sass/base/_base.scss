@@ -6,3 +6,19 @@
 .container{
     width: 100%;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+    &::active{
+        color: black;
+    }
+}
+
+ul{
+    padding-left: 0;
+}
+
+li{
+    list-style-type: none;
+}
