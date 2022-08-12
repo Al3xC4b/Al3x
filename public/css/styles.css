@@ -396,6 +396,50 @@ footer a .fa-handshake-angle {
   margin-bottom: 40px;
 }
 
+.choice {
+  width: 90%;
+}
+.choice__dish {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #FFF;
+  border-radius: 25px;
+  padding-left: 15px;
+  padding-right: 25px;
+  box-shadow: 0px 5px 15px #dddddd;
+}
+.choice__dish h3 {
+  font-size: 25px;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+.choice__dish p {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.choice__dish-price {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.choice__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 100%;
+  background-color: #99E2D0;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-radius: 0 25px 25px 0;
+  color: #FFF;
+  font-size: 30px;
+}
+
 .how-it-works {
   display: flex;
   align-items: center;
@@ -505,7 +549,8 @@ footer a .fa-handshake-angle {
 
 #carte {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: -50px;
   border-radius: 40px 40px 0 0;
   background-color: rgb(246, 246, 246);

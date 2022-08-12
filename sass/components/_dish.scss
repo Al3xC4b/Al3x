@@ -1,0 +1,53 @@
+.choice{
+    width: 90%;
+
+
+    &__dish{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        background-color: #FFF;
+        border-radius: 25px;
+        padding-left: 15px;
+        padding-right: 25px;
+        @include box-shadow-cartes;
+
+        h3{
+            font-size: 25px;
+            margin-bottom: 0;
+            margin-top: 20px;
+        }
+
+        p{
+            font-size: 20px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__dish-price{
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        
+    }
+
+    &__check{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 100%;
+        background-color: $color-tertiary;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        border-radius: 0 25px 25px 0;
+        color: #FFF;
+        font-size: 30px;
+        // display: none;
+    }
+
+
+}
