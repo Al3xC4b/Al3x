@@ -388,16 +388,30 @@ footer a .fa-handshake-angle {
 .btn {
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   font-size: 20px;
-  padding: 20px 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: #fff;
   border-radius: 40px;
   font-weight: 400;
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  width: 65%;
+  text-align: center;
 }
 
 .choice {
   width: 90%;
+}
+.choice__title {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.choice__title span {
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 5px;
 }
 .choice__dish {
   position: relative;
@@ -409,21 +423,33 @@ footer a .fa-handshake-angle {
   padding-left: 15px;
   padding-right: 25px;
   box-shadow: 0px 5px 15px #dddddd;
+  margin-bottom: 20px;
 }
 .choice__dish h3 {
-  font-size: 25px;
+  font-size: 18px;
   margin-bottom: 0;
-  margin-top: 20px;
+  margin-top: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .choice__dish p {
-  font-size: 20px;
+  font-size: 14px;
   margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.choice__dish-name {
+  min-width: 250px;
 }
 .choice__dish-price {
-  font-size: 20px;
+  font-size: 14x;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  width: 60px;
+  text-align: right;
 }
 .choice__check {
   display: flex;
@@ -438,6 +464,7 @@ footer a .fa-handshake-angle {
   border-radius: 0 25px 25px 0;
   color: #FFF;
   font-size: 30px;
+  display: none;
 }
 
 .how-it-works {
