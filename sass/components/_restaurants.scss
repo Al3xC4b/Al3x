@@ -2,7 +2,7 @@
     width: 90%;
     position: relative;
     margin-bottom: 20px;
-    
+
 
     &__img{
         width: 100%;
@@ -45,20 +45,20 @@
         padding: 10px;
         top: 25px;
         right: 25px;
-        
+
     }
 
     &__heart{
         display: flex;
         justify-content: flex-end;
-        
+
         font-size: 30px;
         margin-right: 30px;
         .fa-solid{
             margin-right: -30px;
-            display: none;
+            display: none; 
         }
 
-        
+
     }
 }
