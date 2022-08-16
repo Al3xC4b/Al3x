@@ -471,11 +471,11 @@ footer a .fa-handshake-angle {
   flex-grow: 1;
 }
 .choice__dish-price {
-  font-size: 14x;
   font-weight: 700;
   margin-bottom: 18px;
-  min-width: 60px;
+  margin-left: 10px;
   text-align: right;
+  margin-right: 15px;
 }
 .choice__check {
   display: flex;
