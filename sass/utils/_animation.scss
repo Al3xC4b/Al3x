@@ -2,7 +2,25 @@
     0% {
         transform: scale(0);
     }
+
+    80%{
+        transform: scale(1.2);
+    }
+
     100% {
         transform: scale(1);
+
+    }
+}
+
+@keyframes check-dish {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80px;
+        transform-origin: right;
+
     }
 }

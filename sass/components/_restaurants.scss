@@ -32,9 +32,6 @@
         div:nth-child(1){
             width: 60%;
         }
-        div:nth-child(2){
-            width: 40%;
-        }
     }
 
     &__new{
@@ -50,15 +47,21 @@
 
     &__heart{
         display: flex;
-        justify-content: flex-end;
-
+        justify-content: center;
+        position: absolute;
+        bottom: 20px;
+        right: 25px;
+        background-color: #FFF;
+        border: none;
         font-size: 30px;
-        margin-right: 30px;
         .fa-solid{
             margin-right: -30px;
-            display: none; 
+            transform: scaleY(0);
+            color: $color-primary;
         }
 
-
+        &:focus .fa-solid{
+            animation: heart-filling 1000ms both;
+        }
     }
 }
