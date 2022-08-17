@@ -10,4 +10,30 @@
     margin-bottom: 60px;
     width: 65%;
     text-align: center;
+    @include box-shadow-cartes;
+    position: relative;
+    z-index: 1;
+
+    &:hover{
+        @include box-shadow-cartes--hover;
+        cursor: pointer;
+        &::after{
+            opacity: 1;
+        }
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-radius: 40px;
+        background: linear-gradient(to top left,lighten($color:$color-primary,$amount: 5%),lighten($color:$color-secondary,$amount:5%));
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+    }
+
 }

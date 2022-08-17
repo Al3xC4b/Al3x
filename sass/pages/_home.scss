@@ -1,0 +1,27 @@
+.loading-spinner{
+    background-color: $color-grey-background;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i{
+        position: relative;
+        z-index: 3;
+        font-size: 35px;
+        margin: 20px;
+        animation: loading-spinner $anim-dur-spinner forwards 2 alternate-reverse;
+    }
+
+    .spinner{
+        @for $i from 1 through $num-spinner {
+            &--#{$i}{
+                animation-delay: $anim-delay-spinner *$i;
+            }
+        }
+    }
+}

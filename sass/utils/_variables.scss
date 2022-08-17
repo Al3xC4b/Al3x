@@ -4,3 +4,12 @@ $color-tertiary: #99E2D0;
 $color-grey-background: rgb(246,246,246);
 $color-btn-new: #99E2D0;
 
+//Menu
+$anim-dur: 900ms;
+$num : 3;
+$anim-delay: calc($anim-dur/$num);
+
+//Spinner
+$anim-dur-spinner: 2000ms;
+$num-spinner : 3;
+$anim-delay-spinner: calc($anim-dur/$num);
