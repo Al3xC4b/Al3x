@@ -61,12 +61,24 @@
             color: $color-primary;
         }
 
+        &:hover{
+            cursor: pointer;
+        }
+
         &:focus .fa-solid{
-            animation: heart-filling 300ms both;
+            animation: heart-filling ease-out 300ms both;
         }
     }
 
     &:hover{
         @include box-shadow-cartes--hover;
+    }
+
+    @include tablet-only{
+        width: 45%;
+    }
+
+    @include desktop-only{
+        width: 30%;
     }
 }

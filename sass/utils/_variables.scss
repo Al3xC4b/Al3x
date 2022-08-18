@@ -10,6 +10,12 @@ $num : 3;
 $anim-delay: calc($anim-dur/$num);
 
 //Spinner
-$anim-dur-spinner: 2000ms;
+$anim-dur-spinner: 900ms;
 $num-spinner : 3;
-$anim-delay-spinner: calc($anim-dur/$num);
+$anim-delay-spinner: calc($anim-dur-spinner/$num);
+
+//Media queries
+$breakpoints:(
+    tablet: 768px,
+    desktop: 992px
+);

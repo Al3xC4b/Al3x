@@ -9,6 +9,10 @@ footer{
         position: relative;
         width: 25%;
         height: auto;
+
+        @include desktop-only{
+            width: 200px;
+        }
     }
 
     ul{

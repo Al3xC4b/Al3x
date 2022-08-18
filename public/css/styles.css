@@ -323,7 +323,8 @@ template {
     width: 0px;
   }
   100% {
-    width: 80px;
+    width: 60px;
+    min-width: 60px;
   }
 }
 @keyframes rotate-check {
@@ -346,13 +347,21 @@ template {
 }
 @keyframes loading-spinner {
   0% {
-    transform: rotate(0);
+    transform: rotateY(0);
   }
   50% {
-    transform: rotate(1turn);
+    transform: rotateY(720deg);
   }
   100% {
-    transform: rotate(0);
+    transform: rotateY(3600);
+  }
+}
+@keyframes background-spinner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-9999px);
   }
 }
 * {
@@ -361,6 +370,11 @@ template {
 
 .container {
   width: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 a {
@@ -414,6 +428,11 @@ footer img {
   width: 25%;
   height: auto;
 }
+@media all and (min-width: 992px) {
+  footer img {
+    width: 200px;
+  }
+}
 footer ul {
   margin-top: 15px;
 }
@@ -449,6 +468,14 @@ footer a .fa-handshake-angle {
   position: relative;
   z-index: 1;
 }
+@media all and (min-width: 992px) {
+  .btn {
+    width: 50%;
+  }
+  .btn--menu {
+    width: 30%;
+  }
+}
 .btn:hover {
   box-shadow: 0px 5px 15px #909090;
   cursor: pointer;
@@ -473,6 +500,11 @@ footer a .fa-handshake-angle {
 .choice {
   width: 90%;
 }
+@media all and (min-width: 992px) {
+  .choice {
+    width: 30%;
+  }
+}
 .choice__title {
   font-weight: 300;
   text-transform: uppercase;
@@ -483,6 +515,13 @@ footer a .fa-handshake-angle {
 .choice__title span {
   border-bottom: 3px solid #99E2D0;
   padding-bottom: 5px;
+}
+@media all and (min-width: 768px) {
+  .choice__title {
+    border-bottom: 3px solid #99E2D0;
+    padding-bottom: 5px;
+    width: 100%;
+  }
 }
 .choice__dish {
   display: flex;
@@ -499,12 +538,13 @@ footer a .fa-handshake-angle {
 }
 .choice__dish:hover {
   box-shadow: 0px 5px 15px #909090;
+  cursor: pointer;
 }
 .choice__dish:hover .choice__check {
-  animation: check-dish ease-in-out 400ms both;
+  animation: check-dish ease-out 500ms both;
 }
 .choice__dish:hover .choice__check i {
-  animation: rotate-check ease-out 400ms 100ms both;
+  animation: rotate-check 500ms both;
 }
 .choice__dish h3 {
   font-size: 18px;
@@ -532,7 +572,7 @@ footer a .fa-handshake-angle {
   animation-delay: 900ms;
 }
 .choice__dish-name {
-  min-width: 190px;
+  min-width: 150px;
   flex-grow: 1;
 }
 .choice__dish-price {
@@ -546,7 +586,7 @@ footer a .fa-handshake-angle {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
+  width: 60px;
   height: 80px;
   background-color: #99E2D0;
   color: #FFF;
@@ -556,6 +596,7 @@ footer a .fa-handshake-angle {
 }
 
 .how-it-works {
+  position: relative;
   display: flex;
   align-items: center;
   width: 85%;
@@ -566,6 +607,12 @@ footer a .fa-handshake-angle {
   background-color: rgb(246, 246, 246);
   border-radius: 30px;
   box-shadow: 0px 5px 15px #dddddd;
+}
+@media all and (min-width: 992px) {
+  .how-it-works {
+    width: 30%;
+    margin-left: 0px;
+  }
 }
 .how-it-works__number {
   background-color: #9356DC;
@@ -579,10 +626,26 @@ footer a .fa-handshake-angle {
   line-height: 20px;
   margin-left: -15px;
 }
+@media all and (min-width: 992px) {
+  .how-it-works__number {
+    position: absolute;
+    top: -15px;
+    right: 45%;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    padding: 10px;
+  }
+}
 .how-it-works__icon {
   margin-left: 25px;
   font-size: 25px;
   color: #777777;
+}
+@media all and (min-width: 992px) {
+  .how-it-works__icon {
+    margin-left: 15px;
+  }
 }
 .how-it-works__text {
   margin-left: 25px;
@@ -654,11 +717,24 @@ footer a .fa-handshake-angle {
   transform: scaleY(0);
   color: #9356DC;
 }
+.restaurant__heart:hover {
+  cursor: pointer;
+}
 .restaurant__heart:focus .fa-solid {
-  animation: heart-filling 300ms both;
+  animation: heart-filling ease-out 300ms both;
 }
 .restaurant:hover {
   box-shadow: 0px 5px 15px #909090;
+}
+@media all and (min-width: 768px) {
+  .restaurant {
+    width: 45%;
+  }
+}
+@media all and (min-width: 992px) {
+  .restaurant {
+    width: 30%;
+  }
 }
 
 .loading-spinner {
@@ -667,25 +743,28 @@ footer a .fa-handshake-angle {
   width: 100%;
   height: 100%;
   z-index: 2;
+  opacity: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: background-spinner 1ms 3000ms both;
 }
 .loading-spinner i {
   position: relative;
   z-index: 3;
   font-size: 35px;
-  margin: 20px;
-  animation: loading-spinner 2000ms forwards 2 alternate-reverse;
+  margin: 15px;
+  animation: loading-spinner 900ms cubic-bezier(0.6, 0, 0.6, 1) forwards 2 alternate;
+  color: #9356DC;
 }
 .loading-spinner .spinner--1 {
-  animation-delay: 300ms;
+  animation-delay: 334ms;
 }
 .loading-spinner .spinner--2 {
-  animation-delay: 600ms;
+  animation-delay: 636ms;
 }
 .loading-spinner .spinner--3 {
-  animation-delay: 900ms;
+  animation-delay: 905ms;
 }
 
 .banner {
@@ -707,6 +786,15 @@ footer a .fa-handshake-angle {
   background-color: rgb(246, 246, 246);
   position: relative;
 }
+@media all and (min-width: 992px) {
+  #carte {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
 
 .menu-title {
   display: flex;
@@ -715,26 +803,31 @@ footer a .fa-handshake-angle {
   padding-top: 15px;
 }
 .menu-title :nth-child(1) {
-  width: 80%;
+  flex: 4;
   font-family: "Shrikhand", sans-serif;
   font-size: 30px;
   text-align: left;
 }
+@media all and (min-width: 992px) {
+  .menu-title :nth-child(1) {
+    text-align: center;
+    flex: 100;
+  }
+}
 .menu-title :nth-child(2) {
-  width: 15%;
+  flex: 1;
   text-align: right;
   font-size: 30px;
 }
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-}
-
 section h2 {
   width: 90%;
   font-size: 25px;
   font-weight: 900;
+}
+@media all and (min-width: 768px) {
+  section h2 {
+    text-align: center;
+  }
 }
 
 #section-title, #section-restaurants {
@@ -746,6 +839,16 @@ section h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media all and (min-width: 768px) {
+  #section-restaurants, #section-how-it-works {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }
 
 #section-how-it-works, #section-restaurants {

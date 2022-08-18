@@ -12,14 +12,13 @@
 @import "pages/home.scss";
 @import "pages/menu.scss";
 
-body{
-    @include font-body;
-}
-
 section h2{
     width: 90%;
     font-size: 25px;
     font-weight: 900;
+    @include tablet-only{
+        text-align: center;
+    }
 }
 
 #section-title, #section-restaurants{
@@ -28,6 +27,12 @@ section h2{
 
 #section-title, #section-how-it-works, #section-restaurants{
     @include flex-column;
+}
+
+#section-restaurants, #section-how-it-works{
+    @include tablet-only{
+        @include flex-row-wrap;
+    }
 }
 
 #section-how-it-works, #section-restaurants{

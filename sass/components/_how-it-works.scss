@@ -1,4 +1,5 @@
 .how-it-works{
+    position: relative;
     display: flex;
     align-items: center;
     width: 85%;
@@ -9,6 +10,11 @@
     background-color: $color-grey-background;
     border-radius: 30px;
     @include box-shadow-cartes;
+
+    @include desktop-only{
+        width: 30%;
+        margin-left: 0px;
+    }
 
     &__number{
         background-color: $color-primary;
@@ -21,12 +27,26 @@
         text-align: center;
         line-height: 20px;
         margin-left: -15px;
+        @include desktop-only{
+            position: absolute;
+            top:-15px;
+            right: 45%;
+            height: 40px;
+            width: 40px;
+            font-size: 20px;
+            padding: 10px;
+        }
+
     }
 
     &__icon{
         margin-left: 25px;
         font-size: 25px;
-        color:darken($color-grey-background,50%)
+        color:darken($color-grey-background,50%);
+
+        @include desktop-only{
+            margin-left: 15px;
+        }
     }
 
     &__text{

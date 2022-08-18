@@ -1,6 +1,10 @@
 .choice{
     width: 90%;
 
+    @include desktop-only{
+        width: 30%;
+    }
+
     &__title{
         font-weight: 300;
         text-transform: uppercase;
@@ -11,6 +15,12 @@
         span{
             border-bottom: 3px solid $color-tertiary;
             padding-bottom: 5px;
+        }
+
+        @include tablet-only{
+            border-bottom: 3px solid $color-tertiary;
+            padding-bottom: 5px;
+            width: 100%;
         }
 
     }
@@ -28,15 +38,16 @@
         overflow: hidden;
 
         &:hover{
-            @include box-shadow-cartes--hover
+            @include box-shadow-cartes--hover;
+            cursor: pointer;
         }
  
         &:hover .choice__check{
-            animation: check-dish ease-in-out 400ms both;
+            animation: check-dish ease-out 500ms both;
         }
 
         &:hover .choice__check i{
-            animation: rotate-check ease-out 400ms 100ms both;
+            animation: rotate-check 500ms both;
         }
 
 
@@ -71,7 +82,7 @@
     }
 
     &__dish-name{
-        min-width: 190px;
+        min-width: 150px;
         flex-grow: 1;
 
     }
@@ -89,13 +100,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80px;
+        width: 60px;
         height: 80px;
         background-color: $color-tertiary;
-        // position: absolute;
-        // top: 0px;
-        // right: 0px;
-        // border-radius: 0 25px 25px 0;
         color: #FFF;
         font-size: 30px;
         width: 0px;

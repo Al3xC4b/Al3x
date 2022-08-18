@@ -14,6 +14,14 @@
     position: relative;
     z-index: 1;
 
+    @include desktop-only{
+        width: 50%;
+
+        &--menu{
+            width: 30%;
+        }
+    }
+
     &:hover{
         @include box-shadow-cartes--hover;
         cursor: pointer;

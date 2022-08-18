@@ -4,23 +4,27 @@
     width: 100%;
     height: 100%;
     z-index: 2;
+    opacity: 1;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
+    animation: background-spinner 1ms calc($anim-dur-spinner*2 + $anim-delay-spinner*$num-spinner + 300ms) both;
+
     i{
         position: relative;
         z-index: 3;
         font-size: 35px;
-        margin: 20px;
-        animation: loading-spinner $anim-dur-spinner forwards 2 alternate-reverse;
+        margin: 15px;
+        animation: loading-spinner $anim-dur-spinner cubic-bezier(.6,0,.60,1) forwards 2 alternate;
+        color: $color-primary;
     }
 
     .spinner{
         @for $i from 1 through $num-spinner {
             &--#{$i}{
-                animation-delay: $anim-delay-spinner *$i;
+                animation-delay: $anim-delay-spinner * $i + random($limit: 100)*1ms;
             }
         }
     }
