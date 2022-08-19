@@ -53,6 +53,12 @@
         margin-left: 25px;
         font-weight: 700;
         font-size: 18px;
+
+        @include desktop-only{
+            margin-left: 0;
+            width: 90%;
+            text-align: center;
+        }
     }
 
     &--purple{

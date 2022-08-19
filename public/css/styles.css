@@ -541,10 +541,10 @@ footer a .fa-handshake-angle {
   cursor: pointer;
 }
 .choice__dish:hover .choice__check {
-  animation: check-dish ease-out 500ms both;
+  animation: check-dish 600ms both;
 }
 .choice__dish:hover .choice__check i {
-  animation: rotate-check 500ms both;
+  animation: rotate-check 450ms both;
 }
 .choice__dish h3 {
   font-size: 18px;
@@ -652,6 +652,13 @@ footer a .fa-handshake-angle {
   font-weight: 700;
   font-size: 18px;
 }
+@media all and (min-width: 992px) {
+  .how-it-works__text {
+    margin-left: 0;
+    width: 90%;
+    text-align: center;
+  }
+}
 .how-it-works--purple {
   background-color: #f2eafb;
 }
@@ -758,13 +765,13 @@ footer a .fa-handshake-angle {
   color: #9356DC;
 }
 .loading-spinner .spinner--1 {
-  animation-delay: 334ms;
+  animation-delay: 350ms;
 }
 .loading-spinner .spinner--2 {
-  animation-delay: 636ms;
+  animation-delay: 625ms;
 }
 .loading-spinner .spinner--3 {
-  animation-delay: 905ms;
+  animation-delay: 978ms;
 }
 
 .banner {

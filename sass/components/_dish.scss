@@ -43,11 +43,11 @@
         }
  
         &:hover .choice__check{
-            animation: check-dish ease-out 500ms both;
+            animation: check-dish 600ms both;
         }
 
         &:hover .choice__check i{
-            animation: rotate-check 500ms both;
+            animation: rotate-check 450ms both;
         }
 
 
