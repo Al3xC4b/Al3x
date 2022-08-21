@@ -15,6 +15,10 @@
         span{
             border-bottom: 3px solid $color-tertiary;
             padding-bottom: 5px;
+
+            @include tablet-only{
+                border-bottom: none;
+            }
         }
 
         @include tablet-only{
