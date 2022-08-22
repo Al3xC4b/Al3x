@@ -17,7 +17,7 @@
         z-index: 3;
         font-size: 35px;
         margin: 15px;
-        animation: loading-spinner $anim-dur-spinner cubic-bezier(.6,0,.60,1) forwards 2 alternate;
+        animation: loading-spinner $anim-dur-spinner 150ms cubic-bezier(.6,0,.60,1) forwards 2 alternate;
         color: $color-primary;
     }
 
