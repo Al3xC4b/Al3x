@@ -751,6 +751,11 @@ footer a .fa-handshake-angle {
 .restaurant__heart:hover {
   cursor: pointer;
 }
+@media all and (min-width: 992px) {
+  .restaurant__heart:hover .fa-solid {
+    animation: heart-filling ease-out 300ms both;
+  }
+}
 .restaurant__heart:focus .fa-solid {
   animation: heart-filling ease-out 300ms both;
 }
@@ -789,77 +794,13 @@ footer a .fa-handshake-angle {
   color: #9356DC;
 }
 .loading-spinner .spinner--1 {
-  animation-delay: 286ms;
+  animation-delay: 322ms;
 }
 .loading-spinner .spinner--2 {
-  animation-delay: 518ms;
+  animation-delay: 455ms;
 }
 .loading-spinner .spinner--3 {
-  animation-delay: 707ms;
-}
-
-.banner {
-  width: 100%;
-  height: 300px;
-}
-.banner img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-#carte {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: -50px;
-  border-radius: 40px 40px 0 0;
-  background-color: rgb(246, 246, 246);
-  position: relative;
-}
-@media all and (min-width: 992px) {
-  #carte {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-}
-
-.menu-title {
-  display: flex;
-  align-items: center;
-  width: 90%;
-  padding-top: 15px;
-}
-.menu-title :nth-child(1) {
-  flex: 4;
-  font-family: "Shrikhand", sans-serif;
-  font-size: 30px;
-  text-align: left;
-}
-@media all and (min-width: 992px) {
-  .menu-title :nth-child(1) {
-    text-align: center;
-    flex: 100;
-  }
-}
-.menu-title :nth-child(2) {
-  flex: 1;
-  text-align: right;
-  font-size: 30px;
-}
-section h2 {
-  width: 90%;
-  font-size: 25px;
-  font-weight: 900;
-}
-@media all and (min-width: 768px) {
-  section h2 {
-    text-align: center;
-  }
+  animation-delay: 689ms;
 }
 
 #section-title, #section-restaurants {
@@ -924,6 +865,90 @@ h1 + p {
 
 #restaurants {
   background-color: rgb(246, 246, 246);
+}
+
+.banner {
+  width: 100%;
+  height: 300px;
+}
+.banner img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#carte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -50px;
+  border-radius: 40px 40px 0 0;
+  background-color: rgb(246, 246, 246);
+  position: relative;
+}
+@media all and (min-width: 992px) {
+  #carte {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+
+.menu-title {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  padding-top: 15px;
+}
+.menu-title h1 {
+  flex: 4;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 30px;
+  text-align: left;
+}
+@media all and (min-width: 992px) {
+  .menu-title h1 {
+    text-align: center;
+    flex: 100;
+  }
+}
+.menu-title button {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(246, 246, 246);
+  border: none;
+  font-size: 30px;
+}
+.menu-title button .fa-solid {
+  margin-right: -30px;
+  transform: scaleY(0);
+  color: #9356DC;
+}
+.menu-title button:hover {
+  cursor: pointer;
+}
+@media all and (min-width: 992px) {
+  .menu-title button:hover .fa-solid {
+    animation: heart-filling ease-out 300ms both;
+  }
+}
+.menu-title button:focus .fa-solid {
+  animation: heart-filling ease-out 300ms both;
+}
+
+section h2 {
+  width: 90%;
+  font-size: 25px;
+  font-weight: 900;
+}
+@media all and (min-width: 768px) {
+  section h2 {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

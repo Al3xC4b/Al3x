@@ -42,3 +42,8 @@
         @content;
     } 
 }
+
+@mixin animation-heart{
+    animation: heart-filling ease-out 300ms both;
+}
+
